@@ -2,18 +2,10 @@ import { useContext } from 'react';
 import { ShopContext } from '../context';
 
 function BasketItem(props) {
-  const {
-    qua,
-    mainId,
-    displayName,
-    finalPrice,
-    removeFromCart = Function.prototype,
-    increment = Function.prototype,
-    decrement = Function.prototype,
-  } = props;
+  const { qua, mainId, displayName, finalPrice } = props;
 
-  const { example } = useContext(ShopContext);
-  console.log(example);
+  const { removeFromCart, increment, decrement } = useContext(ShopContext);
+
   return (
     <li className="collection-item ">
       {displayName} x
